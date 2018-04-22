@@ -84,7 +84,7 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      *
      * @return string
      */
-    public function serialize(): string {
+    public function serialize() {
         return serialize($this->items);
     }
 
@@ -93,7 +93,7 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      * @param string $queueData
      * @return void
      */
-    public function unserialize(string $queueData): void {
+    public function unserialize($queueData) {
 
         foreach (unserialize($queueData) as $element) {
             $this->insert($element['data'], $element['priority']);
