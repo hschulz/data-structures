@@ -1,0 +1,21 @@
+{
+    "name": "hschulz/data-structures",
+    "description": "Implementation of useful structures.",
+    "authors": [
+        {
+            "name": "Hauke Schulz",
+            "email": "hauke27@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "hschulz\\DataStructures\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "apcu-autoloader": true
+    }
+}
