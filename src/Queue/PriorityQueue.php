@@ -5,15 +5,15 @@ namespace hschulz\DataStructures\Queue;
 use \Countable;
 use \IteratorAggregate;
 use \Serializable;
-use \SplPriorityQueue;
 use \serialize;
+use \SplPriorityQueue;
 use \unserialize;
 
 /**
  *
  */
-class PriorityQueue implements Countable, IteratorAggregate, Serializable {
-
+class PriorityQueue implements Countable, IteratorAggregate, Serializable
+{
     /**
      *
      * @var int
@@ -35,7 +35,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
     /**
      *
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->items = [];
         $this->queue = new SplPriorityQueue();
     }
@@ -44,7 +45,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      *
      * @return array
      */
-    public function toArray(): array {
+    public function toArray(): array
+    {
         return $this->items;
     }
 
@@ -54,8 +56,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      * @param int $priority
      * @return void
      */
-    public function insert($data, int $priority = self::PIRORITY_DEFAULT): void {
-
+    public function insert($data, int $priority = self::PIRORITY_DEFAULT): void
+    {
         $this->items[] = [
             'data' => $data,
             'priority' => $priority
@@ -68,7 +70,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      *
      * @return int
      */
-    public function count(): int {
+    public function count(): int
+    {
         return $this->queue->count();
     }
 
@@ -76,7 +79,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      *
      * @return SplPriorityQueue
      */
-    public function getIterator(): SplPriorityQueue {
+    public function getIterator(): SplPriorityQueue
+    {
         return clone $this->queue;
     }
 
@@ -84,7 +88,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      *
      * @return string
      */
-    public function serialize() {
+    public function serialize()
+    {
         return serialize($this->items);
     }
 
@@ -93,8 +98,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      * @param string $queueData
      * @return void
      */
-    public function unserialize($queueData) {
-
+    public function unserialize($queueData)
+    {
         foreach (unserialize($queueData) as $element) {
             $this->insert($element['data'], $element['priority']);
         }
@@ -105,8 +110,8 @@ class PriorityQueue implements Countable, IteratorAggregate, Serializable {
      * @param PriorityQueue $queue
      * @return void
      */
-    public function merge(PriorityQueue $queue): void {
-
+    public function merge(self $queue): void
+    {
         $data = $queue->toArray();
 
         foreach ($data as $element) {
