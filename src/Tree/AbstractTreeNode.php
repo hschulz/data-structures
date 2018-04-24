@@ -2,14 +2,14 @@
 
 namespace hschulz\DataStructures\Tree;
 
-use \hschulz\DataStructures\Tree\TreeNodeInterface;
 use \array_search;
 use \count;
 
 /**
  *
  */
-abstract class AbstractTreeNode implements TreeNodeInterface {
+abstract class AbstractTreeNode implements TreeNodeInterface
+{
 
     /**
      *
@@ -26,7 +26,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
     /**
      *
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->children = [];
     }
 
@@ -35,7 +36,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      * @param TreeNodeInterface $node
      * @return void
      */
-    public function addChild(TreeNodeInterface $node): void {
+    public function addChild(TreeNodeInterface $node): void
+    {
         $this->children[] = $node;
         $this->isLeaf = false;
     }
@@ -45,7 +47,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      * @param int $index
      * @return TreeNodeInterface
      */
-    public function getChildAt(int $index): TreeNodeInterface {
+    public function getChildAt(int $index): TreeNodeInterface
+    {
         return empty($this->children[$index]) ? null : $this->children[$index];
     }
 
@@ -53,7 +56,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      *
      * @return int
      */
-    public function getSumChildCount(): int {
+    public function getSumChildCount(): int
+    {
         $count = count($this->children);
 
         if ($count > 0) {
@@ -69,7 +73,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      *
      * @return int
      */
-    public function getChildCount(): int {
+    public function getChildCount(): int
+    {
         return count($this->children);
     }
 
@@ -77,7 +82,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      *
      * @return array
      */
-    public function getChildren(): array {
+    public function getChildren(): array
+    {
         return $this->children;
     }
 
@@ -86,7 +92,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      * @param TreeInterface $node
      * @return int
      */
-    public function getIndex(TreeNodeInterface $node): int {
+    public function getIndex(TreeNodeInterface $node): int
+    {
         $index = array_search($node, $this->children, true);
         return ($index === false) ? -1 : $index;
     }
@@ -95,7 +102,8 @@ abstract class AbstractTreeNode implements TreeNodeInterface {
      *
      * @return bool
      */
-    public function isLeaf(): bool {
+    public function isLeaf(): bool
+    {
         return $this->isLeaf;
     }
 }

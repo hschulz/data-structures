@@ -7,9 +7,10 @@ use \PHPUnit\Framework\TestCase;
 /**
  *
  */
-final class PriorityQueueTest extends TestCase {
-
-    public function testCanAddIntegers() {
+final class PriorityQueueTest extends TestCase
+{
+    public function testCanAddIntegers()
+    {
         $queue = new \hschulz\DataStructures\Queue\PriorityQueue();
 
         $queue->insert(666, 2);
