@@ -5,14 +5,15 @@ namespace hschulz\DataStructures\Tree;
 /**
  *
  */
-interface TreeNodeInterface {
+interface TreeNodeInterface
+{
 
     /**
      *
      * @param TreeNodeInterface $node
      * @return void
      */
-    public function addChild(TreeNodeInterface $node);
+    public function addChild(self $node);
 
     /**
      *
@@ -25,7 +26,7 @@ interface TreeNodeInterface {
      * @param int $index
      * @return TreeNodeInterface
      */
-    public function getChildAt(int $index): TreeNodeInterface;
+    public function getChildAt(int $index): self;
 
     /**
      *
@@ -38,7 +39,7 @@ interface TreeNodeInterface {
      * @param TreeNodeInterface $node
      * @return int
      */
-    public function getIndex(TreeNodeInterface $node): int;
+    public function getIndex(self $node): int;
 
     /**
      *
