@@ -9,6 +9,6 @@ before_script:
 
 script:
     - vendor/bin/phpunit --bootstrap=vendor/autoload.php tests/unit/
-    - vendor/bin/phpunit --whitelist=src/ --coverage-clover=coverage.xml
+    - vendor/bin/phpunit --whitelist=src/ --coverage-clover=coverage.xml src/
 
 after_success: bash <(curl -s https://codecov.io/bash)
