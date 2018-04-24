@@ -8,7 +8,7 @@ before_script:
     - travis_retry composer update
 
 script:
-    - vendor/bin/phpunit --autoload=vendor/autoload.php tests/unit/
+    - vendor/bin/phpunit --bootstrap=vendor/autoload.php tests/unit/
     - vendor/bin/phpunit --whitelist=src/ --coverage-clover=coverage.xml
 
 after_success: bash <(curl -s https://codecov.io/bash)
