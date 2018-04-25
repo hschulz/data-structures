@@ -2,16 +2,16 @@
 
 namespace hschulz\DataStructures\Tests\Tree;
 
-use \PHPUnit\Framework\TestCase;
 use \hschulz\DataStructures\Tree\AbstractTreeNode;
+use \PHPUnit\Framework\TestCase;
 
 /**
  *
  */
-final class AbstractTreeNodeTest extends TestCase {
-
-    public function testConcreteImplementation() {
-
+final class AbstractTreeNodeTest extends TestCase
+{
+    public function testConcreteImplementation()
+    {
         $stub = $this->getMockForAbstractClass(AbstractTreeNode::class);
 
         $stub->expects($this->any())

@@ -2,16 +2,16 @@
 
 namespace hschulz\DataStructures\Tests\Tree;
 
-use \PHPUnit\Framework\TestCase;
 use \hschulz\DataStructures\Tree\TreeNode;
+use \PHPUnit\Framework\TestCase;
 
 /**
  *
  */
-final class TreeNodeTest extends TestCase {
-
-    public function testEmptyTreeIsLeaf() {
-
+final class TreeNodeTest extends TestCase
+{
+    public function testEmptyTreeIsLeaf()
+    {
         $tree = new TreeNode();
 
         $this->assertTrue($tree->isLeaf());

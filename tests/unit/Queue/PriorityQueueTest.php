@@ -2,8 +2,8 @@
 
 namespace hschulz\DataStructures\Tests;
 
-use \PHPUnit\Framework\TestCase;
 use \hschulz\DataStructures\Queue\PriorityQueue;
+use \PHPUnit\Framework\TestCase;
 use function \count;
 use function \serialize;
 use function \unserialize;
@@ -73,8 +73,8 @@ final class PriorityQueueTest extends TestCase
     /**
      *
      */
-    public function testCanBeSerialized() {
-
+    public function testCanBeSerialized()
+    {
         $queue = new PriorityQueue();
 
         $queue->insert('test', 100);
@@ -87,8 +87,8 @@ final class PriorityQueueTest extends TestCase
     /**
      *
      */
-    public function testCanBeUnserialized() {
-
+    public function testCanBeUnserialized()
+    {
         $queue = unserialize(self::SERIALIZED_QUEUE);
 
         $this->assertInstanceOf(PriorityQueue::class, $queue);
