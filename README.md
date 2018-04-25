@@ -7,7 +7,8 @@ Data structures
 [github-issues]: https://img.shields.io/github/issues/hschulz/data-structures.svg?style=flat-square
 [contrib-welcome]: https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat-square
 [license]: https://img.shields.io/github/license/hschulz/data-structures.svg?style=flat-square
+[styleci-badge]: https://styleci.io/repos/130553513/shield
 
-![Travis][travis] ![Codecov][codecov] ![Travis PHP version][travis-php] ![GitHub issues][github-issues] ![Contributions welcome][contrib-welcome] ![license][license]
+![Travis][travis] ![Codecov][codecov] ![Style-CI][styleci-badge] ![Travis PHP version][travis-php] ![GitHub issues][github-issues] ![Contributions welcome][contrib-welcome] ![license][license]
 
 Implementation of some data structures in PHP.
