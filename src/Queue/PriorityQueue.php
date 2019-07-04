@@ -3,8 +3,8 @@
 namespace hschulz\DataStructures\Queue;
 
 use \Serializable;
-use \SplPriorityQueue;
 use function \serialize;
+use \SplPriorityQueue;
 use function \unserialize;
 
 /**
