@@ -2,9 +2,9 @@
 
 namespace hschulz\DataStructures\Tests;
 
+use function \count;
 use \hschulz\DataStructures\Queue\PriorityQueue;
 use \PHPUnit\Framework\TestCase;
-use function \count;
 use function \serialize;
 use function \unserialize;
 
