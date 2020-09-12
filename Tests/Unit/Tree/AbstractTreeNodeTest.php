@@ -15,7 +15,13 @@ final class AbstractTreeNodeTest extends TestCase
     public function testConcreteImplementation()
     {
         $stub = $this->getMockForAbstractClass(
-            AbstractTreeNode::class, [], '', true, true, true, ['isLeaf']
+            AbstractTreeNode::class,
+            [],
+            '',
+            true,
+            true,
+            true,
+            ['isLeaf']
         );
 
         $stub->expects($this->any())

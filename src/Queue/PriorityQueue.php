@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Hschulz\DataStructures\Queue;
 
 use Serializable;
-use SplPriorityQueue;
 use function serialize;
+use SplPriorityQueue;
 use function unserialize;
 
 /**

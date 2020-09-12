@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Hschulz\DataStructures\Tests\Unit\Queue;
 
+use function count;
 use Hschulz\DataStructures\Queue\PriorityQueue;
 use PHPUnit\Framework\TestCase;
-use function count;
 use function serialize;
 use function unserialize;
 
@@ -18,7 +18,7 @@ final class PriorityQueueTest extends TestCase
     /**
      * @var string
      */
-    const SERIALIZED_QUEUE = 'C:42:"Hschulz\DataStructures\Queue\PriorityQueue":59:{a:1:{i:0;a:2:{s:4:"data";s:4:"test";s:8:"priority";i:100;}}}';
+    public const SERIALIZED_QUEUE = 'C:42:"Hschulz\DataStructures\Queue\PriorityQueue":59:{a:1:{i:0;a:2:{s:4:"data";s:4:"test";s:8:"priority";i:100;}}}';
 
     /**
      *
