@@ -1,9 +1,11 @@
 <?php
 
-namespace hschulz\DataStructures\Tests\Tree;
+declare(strict_types=1);
 
-use \hschulz\DataStructures\Tree\TreeNode;
-use \PHPUnit\Framework\TestCase;
+namespace Hschulz\DataStructures\Tests\Unit\Tree;
+
+use Hschulz\DataStructures\Tree\TreeNode;
+use PHPUnit\Framework\TestCase;
 
 /**
  *
