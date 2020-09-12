@@ -1,9 +1,11 @@
 <?php
 
-namespace hschulz\DataStructures\Tree;
+declare(strict_types=1);
 
-use function \array_search;
-use function \count;
+namespace Hschulz\DataStructures\Tree;
+
+use function array_search;
+use function count;
 
 /**
  *

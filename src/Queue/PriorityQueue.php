@@ -1,11 +1,13 @@
 <?php
 
-namespace hschulz\DataStructures\Queue;
+declare(strict_types=1);
 
-use \Serializable;
-use \SplPriorityQueue;
-use function \serialize;
-use function \unserialize;
+namespace Hschulz\DataStructures\Queue;
+
+use Serializable;
+use SplPriorityQueue;
+use function serialize;
+use function unserialize;
 
 /**
  *
@@ -16,7 +18,7 @@ class PriorityQueue extends SplPriorityQueue implements Serializable
      * The default priority value used when no priority is given.
      * @var int
      */
-    const PIRORITY_DEFAULT = 1;
+    public const PIRORITY_DEFAULT = 1;
 
     /**
      * Iterates the queue and returns an array containing each item with
@@ -59,7 +61,7 @@ class PriorityQueue extends SplPriorityQueue implements Serializable
      *
      * @return string The serialized queue
      */
-    public function serialize()
+    public function serialize(): string
     {
         return serialize($this->toArray());
     }
@@ -70,7 +72,7 @@ class PriorityQueue extends SplPriorityQueue implements Serializable
      * @param string $queue The serialized queue data
      * @return void
      */
-    public function unserialize($queue)
+    public function unserialize($queue): void
     {
         foreach (unserialize($queue) as $item) {
             $this->insert($item['data'], $item['priority']);

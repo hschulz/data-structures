@@ -1,6 +1,8 @@
 <?php
 
-namespace hschulz\DataStructures\Tree;
+declare(strict_types=1);
+
+namespace Hschulz\DataStructures\Tree;
 
 /**
  *
